@@ -1,0 +1,20 @@
+<div *ngIf="mode == 'edit'; else displayBlog;">
+    <section style="margin: 20px;">
+        <h1 style="margin-bottom: 20px;">Create a new Blog</h1>
+
+        <form action="">
+            <input type="text" name="title" placeholder="Blog Title" [(ngModel)]="blog.title">
+
+            <textarea name="story" id="story" cols="30" rows="10" [(ngModel)]="blog.story" class="story"></textarea>
+
+            <button type="button" class="btn btn-primary" (click)="createBlog();">Create / Edit</button>
+
+            <i *ngIf="updated" style="color: green; display: block;">Success!</i>
+        </form>
+    </section>
+</div>
+
+<ng-template #displayBlog>
+    <h1> {{ blog.title }} </h1>
+    <p> {{ blog.story }} </p>
+</ng-template>

@@ -1,27 +1,45 @@
 # Blog
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+This app is created using MEAN Stack.
 
-## Development server
+## Create Frontend Build
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ng build
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## MongoDB Database Connection
 
-## Build
+1. Create a database in your local environment with name `practice`.
+2. Add a `users` collection to it.
+3. Create a empty document.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Run server
 
-## Running unit tests
+Run node command `node server.js`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Browser Setup
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Open `localhost:4500` in Chrome Browser.
+2. Open Chrome Dev Tools.
+3. Add a field to your session storage `userId`.
+4. Get the user _id from user document created and store it in newly created `userId` field in session storage.
+5. Refresh the browser.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## How to use the app?
+
+1. Create a blog - Click New Blog. It will take you to a form page. Add some text and create.
+2. Edit a blog - On list of blogs, click Edit option to open form, make your changes and save.
+3. Delete a blog - Same as above.
+
+
+## Future Updates
+
+1. To open a blog, in the URL, use blog's url slugs instead of blog ID. As this is more readable.
+2. Add view counter for each blog.
+3. Allow adding text in different forms like Bold, Italic, code etc. Use Quill Editor to perform this task.
+4. Get most popular topics and suggest to users as an idea for writing a blog.
+
+[Premium]
+5. Show analytics such as how was the audience reaction in last one week.

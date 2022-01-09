@@ -1,0 +1,19 @@
+<h1>My Blogs:</h1>
+
+<a routerLink="/new">Create New Blog</a>
+
+<section>
+    <div class="row">
+        <div *ngFor="let blog of blogs;" class="col-md-6">
+            <b *ngIf="blog.deleted" style="color: red;"><i>DELETED</i></b>
+            <h2> {{ blog.title }} </h2>
+
+            <p> {{ blog.story }} </p>
+
+            <button type="button" (click)="openBlog(blog._id);" class="btn btn-primary">Check Blog</button>
+            <a href="#" (click)="openEditor(blog._id);">Edit</a>
+            <a href="#" (click)="delBlog(blog._id);">Delete</a>
+        </div>
+    </div>
+
+</section>
